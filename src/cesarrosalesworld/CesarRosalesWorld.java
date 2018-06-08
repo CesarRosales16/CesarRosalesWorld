@@ -33,11 +33,15 @@ public class CesarRosalesWorld {
         Raza razaJ2 = RazaFactory.getRaza(r2);
         razaJ2.crear();
         Partida partida = new Partida();
-        while (fase < 10) {
-            System.out.println("Fase " + fase + ":");
-            turno = partida.turno(turno);
-            partida.fase(turno);
-            fase++;
-        }
+        System.out.println("Vida cm raza j1: " + razaJ1.getVidaCentroMando());
+        razaJ1.construirEdificacion();
+        //da error NULL POINER EXEPCTION
+        razaJ1.mostrarEdificaciones();
+//        while (fase < 10) {
+//            System.out.println("Fase " + fase + ":");
+//            turno = partida.turno(turno);
+//            partida.fase(turno);
+//            fase++;
+//        }
     }
 }
