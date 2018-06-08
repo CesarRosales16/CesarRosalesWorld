@@ -20,7 +20,7 @@ public class Vehiculo {
         this.tipo = b.tipo;
         this.vida = b.vida;
         this.danio = b.danio;
-        this.faseCreacion = b.costoR1;
+        this.faseCreacion = b.faseCreacion;
         this.costoR1 = b.costoR1;
         this.costoR2 = b.costoR2;
     }

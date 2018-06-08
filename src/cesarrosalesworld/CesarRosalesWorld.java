@@ -14,7 +14,8 @@ public class CesarRosalesWorld {
      */
     public static void main(String[] args) {
         DirectorVehiculo directorV = new DirectorVehiculo();
-        Vehiculo v1 = directorV.getVehiculo("Tanqueta", 100, 13, 104, 75);
+        Vehiculo v1 = directorV.getVehiculo("Tanque", 100, 13, 75, 35, 69);
+        System.out.println(v1.getFaseCreacion());
         System.out.println(v1.toString());
     }
 
