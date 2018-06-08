@@ -38,6 +38,7 @@ public class Vehiculo {
     public int getDanio() {
         return danio;
     }
+
     public int getCostoR1() {
         return costoR1;
     }
@@ -49,7 +50,6 @@ public class Vehiculo {
     public int getFaseCreacion() {
         return faseCreacion;
     }
-
 
     public int getCostoR3() {
         return costoR3;
@@ -77,7 +77,7 @@ public class Vehiculo {
             this.faseCreacion = faseCreacion;
             return this;
         }
-        
+
         public Builder costoR3(int costoR3) {
             this.costoR3 = costoR3;
             return this;
