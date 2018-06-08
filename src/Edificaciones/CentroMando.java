@@ -91,11 +91,11 @@ public class CentroMando {
     @Override
     public String toString() {
                 return "CentroMando{"
-                + ", vida='" + vida + '\''
+                + "vida='" + vida + '\''
                 + ", nivel='" + nivel + '\''
                 + ", cantR1='" + cantR1 + '\''
                 + ", cantR2='" + cantR2 + '\''
-                + ", cantR2='" + cantR2 + '\''
+                + ", cantR3='" + cantR3 + '\''
                 + ", maxR1='" + maxR1 + '\''
                 + ", maxR2='" + maxR2 + '\''
                 + ", maxR3='" + maxR3 + '\''
