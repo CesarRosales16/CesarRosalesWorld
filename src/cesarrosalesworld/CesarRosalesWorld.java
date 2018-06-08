@@ -1,5 +1,6 @@
 package cesarrosalesworld;
 
+import Edificaciones.CentroMando;
 import Edificaciones.DirectorEdificacion;
 import Edificaciones.Edificacion;
 import Milicia.DirectorMilicia;
@@ -27,12 +28,14 @@ public class CesarRosalesWorld {
         Edificacion e1 = directorE.getEdificacion("Centro de Mando", 1000, 0, 0, 0, 0);
         Recurso r1 = directorR.getRecurso("1", 1000, 1);
         Milicia m1 = directorM.getMilicia("Soldado", 150, 20, 13, 50, 25, 7);
-        Milicia m2 = directorM.getMilicia("Boki", 330, 25, 15, 100, 75,43,8);
+        Milicia m2 = directorM.getMilicia("Boki", 330, 25, 15, 100, 75, 43, 8);
         System.out.println(v1.toString());
         System.out.println(e1.toString());
         System.out.println(r1.toString());
         System.out.println(m1.toString());
         System.out.println(m2.toString());
-    }
 
+        CentroMando cm1 = new CentroMando.Builder(1000, 1, 750, 750, 500, 10000, 5000, 3000).build();
+        System.out.println(cm1.toString());
+    }
 }
