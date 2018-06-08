@@ -7,4 +7,7 @@ package Razas;
 public interface Raza {
 
     void crear();
+    void construirEdificacion();
+    int getVidaCentroMando();
+    void mostrarEdificaciones();
 }

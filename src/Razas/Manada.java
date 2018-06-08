@@ -14,4 +14,19 @@ public class Manada implements Raza {
         System.out.println("\nInformación de la raza Manada: \nEdificaciones disponibles:");
         System.out.println(cm.toString());
     }
+
+    @Override
+    public void construirEdificacion() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getVidaCentroMando() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void mostrarEdificaciones() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
