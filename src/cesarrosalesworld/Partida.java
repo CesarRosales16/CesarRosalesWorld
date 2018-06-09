@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cesarrosalesworld;
 
 /**
@@ -11,28 +6,31 @@ package cesarrosalesworld;
  */
 public class Partida {
 
-    public int turno(int turno) {
+    public int turno(int turno, String nombreJ1, String nombreJ2) {
         if (turno == 0) {
-            System.out.println("Turno inicial, generado con random:");
-            return ((int) (Math.random() * 2) + 1);
+            int inicial = ((int) (Math.random() * 2) + 1);
+            if (inicial == 1) {
+                System.out.println("Turno de " + nombreJ1 + ":\n");
+            } else {
+                System.out.println("Turno de " + nombreJ2 + ":\n");
+            }
+            return inicial;
         } else {
             if (turno == 1) {
-                System.out.println("Fue el turno de 1, se cambia a 2");
+                System.out.println("Turno de " + nombreJ2 + ":\n");
                 return 2;
             } else {
-                System.out.println("Fue el turno de 2, se cambia a 1");
+                System.out.println("Turno de " + nombreJ1 + ":\n");
                 return 1;
             }
         }
     }
 
-    public void fase(int turno) {
-        //int act = turno(turno);
+    public int fase(int turno, String nombreJ1, String nombreJ2) {
         Menu menu = Menu.getInstance();
         menu.mostrar();
-        turno(turno);
+        turno = turno(turno, nombreJ1, nombreJ2);
         menu.mostrar();
-        System.out.println("Termino una fase");
-        //return fase;
+        return turno;
     }
 }
