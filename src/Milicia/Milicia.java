@@ -14,6 +14,7 @@ public class Milicia {
     private int costoR2;
     private int faseCreacion;
     private int costoR3;
+    private int tiempoEspera;
 
     public Milicia() {
     }
@@ -27,6 +28,7 @@ public class Milicia {
         this.costoR2 = b.costoR2;
         this.faseCreacion = b.faseCreacion;
         this.costoR3 = b.costoR3;
+        this.tiempoEspera = b.tiempoEspera;
     }
 
     public String getTipo() {
@@ -61,6 +63,19 @@ public class Milicia {
         return costoR3;
     }
 
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public int getTiempoEspera() {
+        return tiempoEspera;
+    }
+
+    public void setTiempoEspera(int tiempoEspera) {
+        this.tiempoEspera = tiempoEspera;
+    }
+
     public static class Builder {
 
         private String tipo;
@@ -71,6 +86,7 @@ public class Milicia {
         private int costoR2;
         private int faseCreacion;
         private int costoR3;
+        private int tiempoEspera;
 
         public Builder(String tipo, int vida, int danioEdificacion, int danioEnemigos, int costoR1, int costoR2, int faseCreacion) {
             this.tipo = tipo;
@@ -84,6 +100,11 @@ public class Milicia {
 
         public Builder costoRecurso3(int costoR3) {
             this.costoR3 = costoR3;
+            return this;
+        }
+
+        public Builder tiempoEspera(int tiempoEspera) {
+            this.tiempoEspera = tiempoEspera;
             return this;
         }
 
@@ -102,7 +123,8 @@ public class Milicia {
                 + ", costoR1='" + costoR1 + '\''
                 + ", costoR2='" + costoR2 + '\''
                 + ", costoR3='" + costoR3 + '\''
-                + ", faseCreacion='" + faseCreacion + '\''             
+                + ", tiempo Espera='" + tiempoEspera + '\''
+                + ", faseCreacion='" + faseCreacion + '\''
                 + '}';
     }
 

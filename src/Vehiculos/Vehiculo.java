@@ -13,6 +13,7 @@ public class Vehiculo {
     private int costoR2;
     private int faseCreacion;
     private int costoR3;
+    private int tiempoEspera;
 
     public Vehiculo() {
     }
@@ -25,6 +26,7 @@ public class Vehiculo {
         this.costoR2 = b.costoR2;
         this.faseCreacion = b.faseCreacion;
         this.costoR3 = b.costoR3;
+        this.tiempoEspera = b.tiempoEspera;
     }
 
     public String getTipo() {
@@ -55,6 +57,14 @@ public class Vehiculo {
         return costoR3;
     }
 
+    public int getTiempoEspera() {
+        return tiempoEspera;
+    }
+
+    public void setTiempoEspera(int tiempoEspera) {
+        this.tiempoEspera = tiempoEspera;
+    }
+
     public static class Builder {
 
         private String tipo;
@@ -64,6 +74,7 @@ public class Vehiculo {
         private int costoR2;
         private int faseCreacion;
         private int costoR3;
+        private int tiempoEspera;
 
         public Builder(String tipo, int vida, int danio, int costoR1, int costoR2) {
             this.tipo = tipo;
@@ -83,6 +94,10 @@ public class Vehiculo {
             return this;
         }
 
+        public Builder tiempoEspera(int tiempoEspera) {
+            this.tiempoEspera = tiempoEspera;
+            return this;
+        }
         public Vehiculo build() {
             return new Vehiculo(this);
         }
@@ -98,6 +113,7 @@ public class Vehiculo {
                 + ", costo recurso 1='" + costoR1 + '\''
                 + ", costo recurso 2='" + costoR2 + '\''
                 + ", costo recurso 3='" + costoR3 + '\''
+                + ", tiempoEspera='" + tiempoEspera + '\''
                 + '}';
     }
 }

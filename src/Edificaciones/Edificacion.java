@@ -1,5 +1,7 @@
 package Edificaciones;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Cesar Rosales <00060917@uca.edu.sv>
@@ -12,6 +14,8 @@ public class Edificacion {
     private int costoR2;
     private int faseCreacion;
     private int costoR3;
+    private ArrayList<Object> ArrayList;
+    private int tiempoEspera;
 
     public Edificacion() {
     }
@@ -23,6 +27,8 @@ public class Edificacion {
         this.costoR2 = b.costoR2;
         this.faseCreacion = b.faseCreacion;
         this.costoR3 = b.costoR3;
+        this.ArrayList = b.ArrayList;
+        this.tiempoEspera = b.tiempoEspera;
     }
 
     public String getTipo() {
@@ -49,14 +55,32 @@ public class Edificacion {
         return costoR3;
     }
 
+    public ArrayList<Object> getArrayList() {
+        return ArrayList;
+    }
+
+    public void setArrayList(ArrayList<Object> ArrayList) {
+        this.ArrayList = ArrayList;
+    }
+
+    public int getTiempoEspera() {
+        return tiempoEspera;
+    }
+
+    public void setTiempoEspera(int tiempoEspera) {
+        this.tiempoEspera = tiempoEspera;
+    }
+
     public static class Builder {
 
         private String tipo;
-        private int vida;      
+        private int vida;
         private int costoR1;
         private int costoR2;
         private int faseCreacion;
         private int costoR3;
+        private ArrayList<Object> ArrayList;
+        private int tiempoEspera;
 
         public Builder(String tipo, int vida, int costoR1, int costoR2) {
             this.tipo = tipo;
@@ -75,6 +99,16 @@ public class Edificacion {
             return this;
         }
 
+        public Builder ArrayList(ArrayList<Object> ArrayList) {
+            this.ArrayList = ArrayList;
+            return this;
+        }
+
+        public Builder tiempoEspera(int tiempoEspera) {
+            this.tiempoEspera = tiempoEspera;
+            return this;
+        }
+
         public Edificacion build() {
             return new Edificacion(this);
         }
@@ -89,6 +123,8 @@ public class Edificacion {
                 + ", costo recurso 1='" + costoR1 + '\''
                 + ", costo recurso 2='" + costoR2 + '\''
                 + ", costo recurso 3='" + costoR3 + '\''
+                + ", tiempoEspera='" + tiempoEspera + '\''
+                + ", cantidad de elementos del ArrayList='" + ArrayList.size() + '\''
                 + '}';
     }
 }

@@ -31,6 +31,18 @@ public class Recurso {
         return faseRecoleccion;
     }
 
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
+
+    public void setCantidad(int cantidad) {
+        this.cantidad = cantidad;
+    }
+
+    public void setFaseRecoleccion(int faseRecoleccion) {
+        this.faseRecoleccion = faseRecoleccion;
+    }
+
     public static class Builder {
 
         private String tipo;

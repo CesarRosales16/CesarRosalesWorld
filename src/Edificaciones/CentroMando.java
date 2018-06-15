@@ -61,6 +61,38 @@ public class CentroMando {
         return vida;
     }
 
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
+    public void setNivel(int nivel) {
+        this.nivel = nivel;
+    }
+
+    public void setCantR1(int cantR1) {
+        this.cantR1 = cantR1;
+    }
+
+    public void setCantR2(int cantR2) {
+        this.cantR2 = cantR2;
+    }
+
+    public void setCantR3(int cantR3) {
+        this.cantR3 = cantR3;
+    }
+
+    public void setMaxR1(int maxR1) {
+        this.maxR1 = maxR1;
+    }
+
+    public void setMaxR2(int maxR2) {
+        this.maxR2 = maxR2;
+    }
+
+    public void setMaxR3(int maxR3) {
+        this.maxR3 = maxR3;
+    }
+
     public static class Builder {
 
         private int vida;
